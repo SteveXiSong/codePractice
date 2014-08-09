@@ -8,10 +8,10 @@ public class maxProfit {
    }
 
    public static int maxProfit(int[] prices) {
-      int [] profitArray = new int[prices.length-1];
 
       if(prices.length == 1 || prices.length ==0)
          return 0;
+      int [] profitArray = new int[prices.length-1];
 
       for(int i = 1 ; i<prices.length; i++){
          profitArray[i-1] = prices[i] - prices[i-1];
