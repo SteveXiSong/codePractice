@@ -1,4 +1,9 @@
 import java.util.*;
+/*
+ * use a stack to store upper level parent node
+ * use is_down to track the node is visited or not
+ * note the first node
+ */
 
 public class Binary_Tree_Inorder_Traversal{
    public static void main(String [] args){
