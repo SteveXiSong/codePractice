@@ -7,6 +7,12 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+/**
+ * pre-order traversal
+ * root-left-right
+ */
+
 public class Solution {
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
             ArrayList<Integer> retList = new ArrayList<Integer>();
