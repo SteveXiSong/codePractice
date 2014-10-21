@@ -8,12 +8,11 @@ public:
         if( s.empty())
             return true;
 
-        for(string::iterator it_front = s.begin(), it_back = (--s.end()); it_front != it_back; ){
-            while( it_front != it_back && !isalnum(*it_front) ) it_front++;
-            while( it_front != it_back && !isalnum(*it_back) ) it_back--;
-            char front = *it_front, back = *it_back;
-            printf("%c %c\n", front, back);
-            if( toupper(front) != toupper(back))
+        for(string::iterator it_front = s.begin(), it_back = (--s.end()); it_front < it_back; ){
+            while( it_front < it_back && !isalnum(*it_front) ) it_front++;
+            while( it_front < it_back && !isalnum(*it_back) ) it_back--;
+            printf("%c %c\n", *it_front, *it_back);
+            if( toupper(*it_front) != toupper(*it_back))
                 return false;
             it_front++;
             it_back--;
@@ -25,9 +24,10 @@ public:
 int main(){
     string test("this a asiht");
     string test1("this a bcde");
+    string test2("!!!");
+    string test3("a.");
     Solution sln;
-    //if(sln.isPalindrome(test1))
-    if(sln.isPalindrome(test))
+    if(sln.isPalindrome(test3))
         printf("true\n");
     else
         printf("false\n");
